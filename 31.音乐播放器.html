@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>音乐播放器</title>
+	</head>
+	<body>
+		
+		<div id="wrap">
+			<div id="palyer" class="warp_player">
+				
+				
+			</div>
+		</div>
+		
+	</body>
+	
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script type="text/javascript">
+		// axios.get('http://autumnfish.cn/search?keywords='+'勇气')https://api.imjad.cn/cloudmusic/
+		// http://music.163.com/api/search/pc/?type=1&s=%E7%90%86%E6%83%B3%E4%B8%89%E6%97%AC
+		axios.get("http://music.163.com/api/search/pc/?type=1&s=理想三旬")		
+		.then(function(response){
+			console.log(response)
+			// console.log(response.data)
+			// console.log(response.data.data.forecast)
+			//console.log(this.city)undefined
+			// console.log(that.city)
+			// that.datas = response.data.data.forecast
+		}).catch(function(err){
+			console.log(err)
+		})
+	</script>
+	
+</html>
